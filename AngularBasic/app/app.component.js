@@ -23,11 +23,13 @@ System.register(['angular2/core', './comment.component'], function(exports_1, co
         execute: function() {
             AppComponent = (function () {
                 function AppComponent() {
+                    this.title = "Title adds";
+                    this.listTitle = ["title1", "title2", "title3"];
                 }
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: '<h1>Changed by me!!!</h1><mycomment></mycomment>',
+                        template: "\n    <h1>Changed by me!!!</h1><mycomment></mycomment>\n    {{title}}\n     <ul>\n       <li *ngFor=\"#list of listTitle\">\n        {{ list }}\n      </li>\n     </ul>\n    ",
                         directives: [comment_component_1.commentComponent]
                     }), 
                     __metadata('design:paramtypes', [])
